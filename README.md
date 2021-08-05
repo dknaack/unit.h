@@ -7,7 +7,8 @@ use the `TEST` macro:
 #include "unit.h"
 
 TEST(example_test) {
-    unit_test_fail(1 + 1 == 3);
+    if (1 + 1 != 2)
+        unit_test_fail("1 + 1 != 2");
 }
 ```
 
