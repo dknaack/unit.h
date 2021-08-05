@@ -8,7 +8,7 @@ typedef void (*unit_test_t)(void);
     static void unit__##name##_init(void) __attribute__((constructor)); \
     static void unit__##name##_init(void)                               \
     {                                                                   \
-        unit_test_add(""#name, unit__##name);                                \
+        unit_test_add(""#name, unit__##name);                           \
     }                                                                   \
     void unit__##name(void)
 
@@ -98,7 +98,7 @@ unit_test_run(const struct unit__test *t)
         return WEXITSTATUS(status);
     }
 }
-#endif /* linux */
+#endif /* UNIT_H_RUN_TEST */
 
 int
 unit_tests_run(void)
