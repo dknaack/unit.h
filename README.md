@@ -18,7 +18,7 @@ function:
 int
 main(void)
 {
-    return unit_test_run_all();
+    return unit_tests_run();
 }
 ```
 
