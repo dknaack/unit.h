@@ -14,11 +14,11 @@ typedef void (*unit_test_t)(void);
 
 void unit_test_fail(const char *fmt,...);
 void unit_test_add(const char *name, unit_test_t test);
-int  unit_test_run_all(void);
+int  unit_tests_run(void);
 
 #endif /* UNIT_H */
 
-#ifndef UNIT_H_IMPLEMENTATION
+#ifdef UNIT_H_IMPLEMENTATION
 
 #ifndef UNIT_H_SIZE
 #define UNIT_H_SIZE 128
@@ -101,7 +101,7 @@ unit_test_run(const struct unit__test *t)
 #endif /* linux */
 
 int
-unit_test_run_all(void)
+unit_tests_run(void)
 {
     int i, passed = 0;
 
