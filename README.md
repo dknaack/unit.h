@@ -7,7 +7,7 @@ use the `TEST` macro:
 #include "unit.h"
 
 TEST(example_test) {
-    assert(1 + 1 == 3);
+    unit_test_fail(1 + 1 == 3);
 }
 ```
 
