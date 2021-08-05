@@ -12,3 +12,8 @@ check:
 
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f tests test/tests.o test/factorial.o factorial.o
+
+.PHONY: clean
